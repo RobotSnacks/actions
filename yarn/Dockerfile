@@ -9,4 +9,6 @@ LABEL "repository"="https://github.com/RobotSnacks/actions"
 LABEL "homepage"="https://github.com/RobotSnacks/actions"
 LABEL "maintainer"="Joshua Toenyes <josh@robotsnacks.io>"
 
-ENTRYPOINT yarn
+ADD ./entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT [ "/entrypoint.sh" ]
