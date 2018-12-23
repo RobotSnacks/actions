@@ -1,4 +1,4 @@
-FROM gcr.io/robotsnacks/gcloud
+FROM google/cloud-sdk:228.0.0-alpine
 
 LABEL "maintainer"="Joshua Toenyes <josh@robotsnacks.io>"
 LABEL "repository"="https://github.com/RobotSnacks/actions"
