@@ -15,6 +15,8 @@ if [[ -z "${GCLOUD_CLUSTER_ZONE}" ]]; then
   exit 1
 fi
 
+gcloud components install kubectl
+
 gcloud container clusters get-credentials \
   $GCLOUD_CLUSTER_NAME \
   --project=$GCLOUD_PROJECT \
