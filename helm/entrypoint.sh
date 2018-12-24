@@ -3,17 +3,17 @@
 if [[ -z "${GCLOUD_CLUSTER_NAME}" ]]; then
   echo \$GCLOUD_CLUSTER_NAME must be set.
   exit 1
-else
+fi
 
 if [[ -z "${GCLOUD_PROJECT}" ]]; then
   echo \$GCLOUD_PROJECT must be set.
   exit 1
-else
+fi
 
 if [[ -z "${GCLOUD_CLUSTER_ZONE}" ]]; then
   echo \$GCLOUD_CLUSTER_ZONE must be set.
   exit 1
-else
+fi
 
 gcloud container clusters get-credentials \
   $GCLOUD_CLUSTER_NAME \
