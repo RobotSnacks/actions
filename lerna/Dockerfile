@@ -10,6 +10,8 @@ LABEL "homepage"="https://github.com/RobotSnacks/actions"
 LABEL "maintainer"="Joshua Toenyes <josh@robotsnacks.io>"
 
 RUN yarn global add lerna
+RUN npm config set unsafe-perm true
+RUN yarn config set unsafe-perm true
 
 ADD ./filter.sh /bin/filter
 ADD ./entrypoint.sh /entrypoint.sh
