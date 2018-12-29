@@ -25,4 +25,5 @@ if [ $ret -ne 0 ]; then
   exit $ret
 fi
 
+chown -R $(whoami) /github/workspace
 sh -ec "lerna $*"
