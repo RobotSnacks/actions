@@ -11,6 +11,7 @@ LABEL "maintainer"="Joshua Toenyes <josh@robotsnacks.io>"
 
 RUN yarn global add lerna
 
+ADD ./filter.sh /bin/filter
 ADD ./entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]

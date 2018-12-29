@@ -17,4 +17,12 @@ if [ ! -z "${NPM_TOKEN}" ]; then
   yarn config set ${NPM_REGISTRY}/:always-auth true
 fi
 
+pattern="refs/heads/${BRANCH_FILTER:-*}"
+filter "$pattern"
+ret=$?
+
+if [ $ret -ne 0 ]; then
+  exit $ret
+fi
+
 sh -ec "lerna $*"
